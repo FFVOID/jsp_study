@@ -24,12 +24,12 @@ public class Member {
 	}
 
 	public String process() {
-		String result = "유효성 검사에 통과되지 못했습니다";
+		
 		if (email.matches(pattern1) && tel.matches(pattern2)) {
 
-			result = "환영합니다";
+			return "환영합니다";
 		}
-		return result;
+		return "유효성 검사에 통과되지 못했습니다";
 
 	}
 }
