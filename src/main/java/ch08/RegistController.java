@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@WebServlet("/rcontrol")
+@WebServlet("/rcontroller")
 public class RegistController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -18,9 +18,9 @@ public class RegistController extends HttpServlet {
 	
     @Override
 	public void init(ServletConfig config) throws ServletException {
-		super.init(config);
-		
-		service = new RegistService();
+    	super.init(config);
+    	
+    	service = new RegistService();
 	}
 
 	public RegistController() {
@@ -32,11 +32,11 @@ public class RegistController extends HttpServlet {
 		String view = "";
 		
 		if(action == null) {
-			getServletContext().getRequestDispatcher("/rcontrol?action=list").forward(request, response);
+			getServletContext().getRequestDispatcher("/rcontroller?action=list").forward(request, response);
 		} else {
 			switch(action) {
-			case "list":view = list(request, response); break;
-			case "info":view = info(request, response); break;
+			case "list":view = list(request,response); break;
+			case "info":view = info(request,response); break;
 			}
 			
 			getServletContext().getRequestDispatcher("/ch08/" + view).forward(request, response);
@@ -55,5 +55,4 @@ public class RegistController extends HttpServlet {
 		request.setAttribute("regists", regists);
 		return "registList.jsp";
 	}
-
 }

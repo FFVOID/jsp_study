@@ -22,7 +22,7 @@ public class ProductController extends HttpServlet {
     	super.init(config); //서블릿 초기화
     	
     	//프로그램 실행시 최초로 request가 왔을때 객체를 딱 한번만 생성한다
-    	//=>init()은 초기화 역할을 하는 메소드이므로 딱한번 실행되므로
+    	//=>init()은 초기화 역할을 하는 메소드이고 딱한번 실행된다
     	service = new ProductService();
 	}
 

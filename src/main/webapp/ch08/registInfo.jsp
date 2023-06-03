@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,11 +10,11 @@
 	<h2>고객정보 조회</h2>
 	<hr>
 	<ul>
-		<li>고객아이디: ${r.id}</li>		
-		<li>고객명: ${r.name}</li>		
-		<li>주소: ${r.address}</li>		
-		<li>등급: ${r.grade}</li>		
-		<li>전화번호: ${r.phone}</li>		
+		<li>고객아이디:${r.id}</li>
+		<li>고객명:${r.name}</li>
+		<li>주소:${r.address}</li>
+		<li>등급:${r.grade}</li>
+		<li>전화번호:${r.phone}</li>
 	</ul>
 </body>
 </html>
